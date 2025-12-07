@@ -29,7 +29,7 @@ def load_and_split_document(file_path: str) -> List:
     loader = PyPDFLoader(file_path)
     docs = loader.load()
     
-    print(f"✂️  Segmentando {len(docs)} páginas...")
+    print(f"Segmentando {len(docs)} páginas...")
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000,
         chunk_overlap=200,
@@ -68,9 +68,9 @@ def main():
         ingest_to_vectorstore(splits, DB_PATH, MODEL_EMBEDDING)
         
     except FileNotFoundError as e:
-        print(f"❌ Erro de Arquivo: {e}")
+        print(f"Erro de Arquivo: {e}")
     except Exception as e:
-        print(f"❌ Erro Inesperado: {e}")
+        print(f"Erro Inesperado: {e}")
         sys.exit(1)
 
 if __name__ == "__main__":
