@@ -1,0 +1,23 @@
+# --- Ignorar o ambiente virtual (pelo nome que você criou) ---
+local-rag-assistant/
+venv/
+.venv/
+env/
+
+# --- Lixo de cache do Python ---
+__pycache__/
+*.pyc
+
+# --- Banco de Dados Vetorial (Binários) ---
+vectorstore/
+
+# --- Arquivos de Sistema/IDE ---
+.DS_Store
+.vscode/
+.idea/
+
+# --- Arquivos PDF (Opcional: evitar subir livros com copyright) ---
+*.pdf
+
+# --- Segurança ---
+.env
